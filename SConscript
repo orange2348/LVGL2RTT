@@ -11,7 +11,7 @@ inc = []
 # add LVGL common include
 inc = inc + [cwd]
 inc = inc + [cwd + "/lvgl"]
-inc = inc + [cwd + "/lvgl/porting"]
+inc = inc + [cwd + "/lvgl/examples/porting"]
 inc = inc + [cwd + "/lvgl/src/lv_core"]
 inc = inc + [cwd + "/lvgl/src/lv_draw"]
 inc = inc + [cwd + "/lvgl/src/lv_font"]
@@ -21,7 +21,8 @@ inc = inc + [cwd + "/lvgl/src/lv_themes"]
 inc = inc + [cwd + "/lvgl/src/lv_widgets"]
 
 # add LittlevGL basic code lv_debug.c
-src = src + ["lvgl/porting/lv_port_disp.c"]
+src = src + ["lvgl2rtt.c"]
+src = src + ["lvgl/examples/porting/lv_port_disp.c"]
 src = src + Glob('lvgl/src/lv_core/*.c')
 src = src + Glob('lvgl/src/lv_draw/*.c')
 src = src + Glob('lvgl/src/lv_font/*.c')
