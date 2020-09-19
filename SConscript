@@ -32,6 +32,6 @@ src = src + Glob('lvgl/src/lv_themes/*.c')
 src = src + Glob('lvgl/src/lv_widgets/*.c')
 
 # add group to IDE project
-group = DefineGroup('LVGL', src, depend = ['PKG_USING_LVGL2RTT'], CPPPATH = inc)
+group = DefineGroup('LVGL', src, depend = ['PKG_USING_LVGL'], CPPPATH = inc)
 
 Return('group')
